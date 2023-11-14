@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - run: npm ci && npm run build
+      - run: npm install && npm run build
 
       - name: View npm log
         run: cat /home/runner/.npm/_logs/2023-11-14T17_10_02_911Z-debug-0.log
