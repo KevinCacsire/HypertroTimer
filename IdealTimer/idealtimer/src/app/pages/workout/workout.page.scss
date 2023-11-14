@@ -1,0 +1,91 @@
+.finish-workout-button {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45%;
+  height: 48px;
+  font-size: 1em;
+}
+
+.subtract-time-button,
+.add-time-button {
+  position: fixed;
+  bottom: 25px;
+  width: 15%;
+  height: 48px;
+  font-size: 1em;
+  border-radius: 10px; /* Rounded corners */
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Text color */
+  border: none; /* Remove button border */
+  outline: none; /* Remove button outline */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth color transition on hover */
+  text-transform: none; /* Keep the original text casing */
+}
+
+.subtract-time-button {
+  left: 15%;
+  transform: translateX(-50%);
+}
+
+.add-time-button {
+  right: 15%;
+  transform: translateX(50%); /* Adjusted for right alignment */
+}
+
+ion-card-header::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: var(--ion-color-dark);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.are-you-finished-text::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: var(--ion-color-dark);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.modal-buttons-row {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  justify-content: center;
+}
+
+.modal-button {
+  flex: 1;
+}
+
+.are-you-finished-text {
+  color: var(--ion-color-dark);
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+::ng-deep .toast-custom {
+  transform: translateY(-50px) !important;
+}
+
+.total-timer {
+  margin-right: auto;
+  padding-left: 16px;
+}
+
+.countdown-timer {
+  color: var(--ion-color-primary);
+  margin-left: auto;
+  padding-right: 16px;
+}
+
+.danger-timer {
+  color: var(--ion-color-danger);
+}

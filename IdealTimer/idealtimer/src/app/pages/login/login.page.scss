@@ -1,0 +1,17 @@
+ion-content {
+    --background: var(--ion-color-primary);
+}
+
+#forgetPasswordButton {
+    text-transform: initial;
+}
+
+.custom-card {
+  ion-card-header::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: var(--ion-color-primary); /* Replace with your desired color */
+    margin-top: 8px; /* Adjust as needed for spacing */
+  }
+}

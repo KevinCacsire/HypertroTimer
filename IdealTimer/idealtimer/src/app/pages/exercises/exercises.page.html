@@ -1,0 +1,138 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)=navigateToSplits() default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">{{currentSessionName}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <div class="flex-center empty-message" *ngIf="showEmptyMessage">
+    Seems like you haven't created an exercise for this session yet. Press the "+"-button to add your first exercise.
+    <p>Alternatively refresh the page by pulling down on the screen.</p>
+  </div>
+  
+  <ion-list>
+    <ion-reorder-group [disabled]="false" (ionItemReorder)="handleReorder($any($event))">
+      <app-exercise-item *ngFor="let exercise of exercises"
+        [exercise]="exercise"
+        [repsAndWeight]="exerciseVolumesMap.get(exercise.exerciseId!)"
+        (editClick)="openEditModal(exercise)">
+      </app-exercise-item>
+    </ion-reorder-group>
+  </ion-list>
+
+  <div class="content-container">
+    <ion-fab class="add-button" vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button id="open-new-exercise-card" (click)="addModal.present()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  
+    <ion-button *ngIf="exercises.length !== 0" class="start-workout-button" color="success" expand="block" (click)="startWorkout()">
+      START WORKOUT
+    </ion-button>
+  </div>
+  
+
+  <ion-modal id="exercises-modal" class="modal" (ionModalDidDismiss)="clearAddingForm()" #addModal>
+    <ng-template>
+      <form [formGroup]="addingForm">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Adding New Exercise</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <div class="form-label">Search Exercise</div>
+            <ion-searchbar
+              #exerciseInput
+              formControlName="exercise"
+              (ionInput)="onExerciseInput()"
+              (ionFocus)="onExerciseInput()"
+              (ionClear)="clearAddingForm(); onExerciseInput()"
+              placeholder="Exercise name"
+              (keyup.enter)="handleAddEnterKey()"
+            ></ion-searchbar>
+            <ion-list class="exercise-list" *ngIf="filteredExercises.length > 0">
+              <ion-item *ngFor="let exercise of filteredExercises" (click)="addExerciseToSearchBar(exercise)">
+                {{ exercise.split(';')[0] }}
+              </ion-item>
+            </ion-list>
+            <div *ngIf="filteredExercises.length > 5">Scroll down to see more exercises</div>
+            <ion-label *ngIf="addingForm.get('exercise')?.touched && filteredExercises.length == 0 && selectedNewExercise === ''" color="danger">No matching exercises</ion-label>
+            <div class="muscles-not-selected-label" *ngIf="selectedMuscleGroups.length === 0">Please select at least one muscle group</div>
+
+            <div class="muscle-buttons">
+              <ion-button fill="{{ areSelected(4) ? 'solid' : 'outline' }}" (click)="toggleMuscleGroup(4)">Chest</ion-button>
+              <ion-button fill="{{ areSelected(3) ? 'solid' : 'outline' }}" (click)="toggleMuscleGroup(3)">Shoulders</ion-button>
+              <ion-button fill="{{ areSelected(2) ? 'solid' : 'outline' }}" (click)="toggleMuscleGroup(2)">Triceps</ion-button>
+              <ion-button fill="{{ areSelected(5) ? 'solid' : 'outline' }}" (click)="toggleMuscleGroup(5)">Back</ion-button>
+              <ion-button fill="{{ areSelected(1) ? 'solid' : 'outline' }}" (click)="toggleMuscleGroup(1)">Biceps</ion-button>
+              <ion-button fill="{{ areSelected(6) ? 'solid' : 'outline' }}" (click)="toggleMuscleGroup(6)">Quads</ion-button>
+              <ion-button fill="{{ areSelected(7) ? 'solid' : 'outline' }}" (click)="toggleMuscleGroup(7)">Hamstrings</ion-button>
+              <ion-button fill="{{ areSelected(9) ? 'solid' : 'outline' }}" (click)="toggleMuscleGroup(9)">Calves</ion-button>
+              <ion-button fill="{{ areSelected(8) ? 'solid' : 'outline' }}" (click)="toggleMuscleGroup(8)">Glutes</ion-button>
+              <ion-button fill="{{ areSelected(10) ? 'solid' : 'outline' }}" (click)="toggleMuscleGroup(10)">Abs</ion-button>
+              <ion-button fill="{{ areSelected(11) ? 'solid' : 'outline' }}" (click)="toggleMuscleGroup(11)">Forearms</ion-button>
+            </div>
+
+            <div class="buttons-container">
+              <ion-button class="cancel-button" fill="clear" (click)="clearAddingForm()" (click)="addModal.dismiss()">
+                Cancel
+              </ion-button>
+              <ion-button class="save-button" fill="clear" (click)="onSaveClickAdd()" (click)="addModal.dismiss()" [disabled]="!addingForm.valid || selectedNewExercise === ''">
+                Save
+              </ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </form>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal id="edit-modal" class="modal" #editModal>
+    <ng-template>
+      <form [formGroup]="editingForm">
+        <ion-card>
+          <ion-card-header>
+            <div>
+              <ion-card-title>Editing "{{ editingExercise?.exerciseName }}"</ion-card-title>
+            </div>
+          </ion-card-header>
+
+          <ion-card-content>
+  
+            <ion-item>
+              <ion-label position="stacked">
+                Name of exercise
+                <ion-icon class="info-icon" name="help-circle-outline" color="medium" slot="end" (click)="presentAlert()"></ion-icon>
+              </ion-label>
+              <ion-input aria-label="Exercise Name" formControlName="exercise" placeholder="Enter text" (keyup.enter)="handleEditEnterKey()"></ion-input>
+            </ion-item>
+            
+                       
+            <ion-label *ngIf="editingForm.get('exercise')?.touched && editingForm.get('exercise')?.errors?.['required']" color="danger">Name is mandatory</ion-label>
+          
+            <div class="buttons-container">
+              <ion-button class="cancel-button" fill="clear" (click)="editModal.dismiss()">Cancel</ion-button>
+              <ion-button class="save-button" fill="clear" (click)="onSaveClickEdit()" (click)="editModal.dismiss()" [disabled]="!editingForm.valid">Save</ion-button>
+            </div>
+            <ion-button class="delete-button" fill="clear" size="full" (click)="onDeleteClick()" (click)="editModal.dismiss()">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+
+          </ion-card-content>
+        </ion-card>
+      </form>
+    </ng-template>
+  </ion-modal>
+</ion-content>

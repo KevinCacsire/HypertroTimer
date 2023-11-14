@@ -1,0 +1,13 @@
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="onCalendarClicked()" [class.active-tab]="activeTabCalendar">
+      <ion-icon name="calendar-outline"></ion-icon>
+      Calendar
+    </ion-tab-button>
+    <ion-tab-button (click)="onWorkoutClicked()" [class.active-tab]="activeTabWorkout">
+      <ion-icon name="barbell-outline"></ion-icon>
+      Workout
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

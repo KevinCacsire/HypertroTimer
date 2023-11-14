@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <div class="total-timer">
+        Total: {{ formatTime(totalSeconds) }}
+      </div>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Working Out</ion-title>
+    <ion-buttons slot="end">
+      <div [ngClass]="{'countdown-timer': true, 'danger-timer': restIntervalTimer < 5}">
+        Rest: {{ formatTime(restIntervalTimer) }}
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list>
+    <ng-container *ngIf="recentWorkout">
+      <ng-container *ngFor="let groupedExercise of groupedExercises; let i = index">
+        <app-volume-item
+          [groupedExercises]="groupedExercise"
+          [showCheckButton]="i === groupedExerciseIndex" 
+          (moveCheckButtonToNextExercise)="moveCheckToNextGroupedExercise(i)"
+          (nextSet)="startNewRestIntervalTime()"
+          (addedNewSet)="handleNewlyAddedSet(i, $event)"
+          (currentSetWithinGroupedExercise)="setCurrentSetWithinGroupedExercise($event)"
+          #volumeItem></app-volume-item>
+      </ng-container>
+    </ng-container>
+  </ion-list>
+  
+
+  <div class="content-container">
+    <ion-button class="subtract-time-button" expand="block" (click)="subtractToRestIntervalTimer()">
+      -5secs
+    </ion-button>
+    <ion-button id="open-finish-modal" class="finish-workout-button" color="success" expand="block" (click)="updateTime()">
+      FINISH WORKOUT
+    </ion-button>
+    <ion-button class="add-time-button" expand="block" (click)="addToRestIntervalTimer()">
+      +5secs
+    </ion-button>
+  </div>
+
+  <ion-modal trigger="open-finish-modal" class="modal" #finishModal>
+    <ng-template>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title class="text-center">You Finished Your Workout!</ion-card-title>
+        </ion-card-header>
+  
+        <ion-card-content>
+          <p class="info-text">Total Time: {{ calculateTotalTime(startingDate, endingDate) }}</p>
+          <p class="info-text">From-To: {{ startingDate | date: 'HH:mm' }}-{{ endingDate | date: 'HH:mm' }}</p>
+          <p class="info-text">Date: {{ startingDate | date: 'dd.MM.yyyy' }}</p>
+          <p class="info-text">Split: {{ currentSplitName }}</p>
+          <p class="info-text">Session: {{ currentSessionName }}</p>
+          
+          <p class="text-center are-you-finished-text">Are you sure you are finished?</p>
+          <div class="modal-buttons-row">
+            <ion-button color="danger" size="full" class="modal-button" (click)="finishModal.dismiss()">
+              CLOSE
+            </ion-button>
+            <ion-button color="success" size="full" class="modal-button" (click)="finishWorkout(); finishModal.dismiss()">
+              SAVE WORKOUT
+            </ion-button>
+          </div>
+          <ion-button color="danger" fill="clear" size="full" class="modal-button dont-save-button" (click)="toExercisesPage(); finishModal.dismiss()">
+            FINISH AND DON'T SAVE WORKOUT
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </ion-modal>
+</ion-content>

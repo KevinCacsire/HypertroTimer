@@ -1,0 +1,77 @@
+.exercise-log {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid #ccc;
+}
+
+.exercise-name {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2px;
+}
+
+.input-fields {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
+.check-button-container {
+    height: 50px;
+    width: 20%;
+}
+
+.input-group {
+    flex: 1;
+    text-align: left;
+    margin-right: 8px;
+}
+
+.exercise-input {
+    width: 50%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    text-align: center;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.unit {
+    font-size: 1em;
+    margin-left: 0.3em;
+}
+
+.exercise-input:hover {
+    border-color: var(--ion-color-primary);
+}
+
+ion-button {
+    --box-shadow: none;
+    height: 2.8em;
+    width: 3.5em;
+}
+
+.add-delete-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    height: 40px;
+    width: 100%;
+    gap: 30px;
+}

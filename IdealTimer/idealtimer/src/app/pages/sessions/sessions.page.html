@@ -1,0 +1,130 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)=navigateToHome() default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">{{currentSplitName}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <div class="flex-center empty-message" *ngIf="showEmptyMessage">
+    Seems like you haven't created a session for this split yet. Press the "+"-button to add your first session.
+    <p>Alternatively refresh the page by pulling down on the screen.</p>
+  </div>
+
+  <ion-list>
+    <app-session-item *ngFor="let session of sessions"
+      [session]="session"
+      [exercisesAmount]="session.exerciseCount"
+      [estimatedTime]="session.estimatedTime"
+      (itemClick)="clickedSession(session.sessionName, session.sessionId)"
+      (editClick)="openEditModal(session)"
+    ></app-session-item>
+  </ion-list>
+
+  <div class="content-container">
+    <ion-fab class="add-button" vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button id="open-new-session-card" (click)="addModal.present()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+
+  <ion-modal id="sessions-modal" class="modal" (ionModalDidDismiss)="clearAddingForm()" #addModal>
+    <ng-template>
+      <form [formGroup]="addingForm">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Adding New Session</ion-card-title>
+          </ion-card-header>
+        
+          <ion-card-content>
+
+            <ion-item>
+              <ion-input formControlName="sessionName" label="Name of session (e.g., 'Push')" labelPlacement="stacked" placeholder="Enter text" (keyup.enter)="handleAddEnterKey()"></ion-input>
+            </ion-item>
+            <ion-label *ngIf="addingForm.get('sessionName')?.touched && addingForm.get('sessionName')?.errors?.['required']" color="danger">Name is mandatory</ion-label>
+            
+            <ion-item>
+              <ion-select formControlName="weekday" interface="popover" label="Planned day for this session (e.g., 'Monday')" label-placement="stacked" placeholder="Select day">
+                <ion-select-option value="Monday" aria-label="Monday">Monday</ion-select-option>
+                <ion-select-option value="Tuesday" aria-label="Tuesday">Tuesday</ion-select-option>
+                <ion-select-option value="Wednesday" aria-label="Wednesday">Wednesday</ion-select-option>
+                <ion-select-option value="Thursday" aria-label="Thursday">Thursday</ion-select-option>
+                <ion-select-option value="Friday" aria-label="Friday">Friday</ion-select-option>
+                <ion-select-option value="Saturday" aria-label="Saturday">Saturday</ion-select-option>
+                <ion-select-option value="Sunday" aria-label="Sunday">Sunday</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-label *ngIf="addingForm.get('weekday')?.touched && addingForm.get('weekday')?.errors?.['required']" color="danger">Weekday is mandatory</ion-label>
+            
+            <div class="buttons-container">
+              <ion-button class="cancel-button" fill="clear" (click)="clearAddingForm()" (click)="addModal.dismiss()">
+                Cancel
+              </ion-button>
+              <ion-button class="save-button" fill="clear" (click)="onSaveClickAdd()" (click)="addModal.dismiss()" [disabled]="!addingForm.valid">
+                Save
+              </ion-button>
+            </div>
+
+          </ion-card-content>
+        </ion-card>
+      </form>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal id="edit-modal" class="modal" #editModal>
+    <ng-template>
+      <form [formGroup]="editingForm">
+        <ion-card>
+          <ion-card-header>
+            <div>
+              <ion-card-title>Editing "{{ editingSession?.sessionName }}"</ion-card-title>
+            </div>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-item>
+              <ion-label position="stacked">
+                Name of session (e.g., 'Push')
+                <ion-icon class="info-icon" name="help-circle-outline" color="medium" slot="end" (click)="presentAlert()"></ion-icon>
+              </ion-label>
+              <ion-input aria-label="Session Name" formControlName="sessionName" placeholder="Enter text" (keyup.enter)="handleEditEnterKey()"></ion-input>
+            </ion-item>
+            <ion-label *ngIf="editingForm.get('sessionName')?.touched && editingForm.get('sessionName')?.errors?.['required']" color="danger">Name is mandatory</ion-label>
+          
+            <ion-item>
+              <ion-select formControlName="weekday" interface="popover" label="Weekday for this session (e.g., 'Monday')" label-placement="stacked" placeholder="Select day">
+                <ion-select-option value="Monday" aria-label="Monday">Monday</ion-select-option>
+                <ion-select-option value="Tuesday" aria-label="Tuesday">Tuesday</ion-select-option>
+                <ion-select-option value="Wednesday" aria-label="Wednesday">Wednesday</ion-select-option>
+                <ion-select-option value="Thursday" aria-label="Thursday">Thursday</ion-select-option>
+                <ion-select-option value="Friday" aria-label="Friday">Friday</ion-select-option>
+                <ion-select-option value="Saturday" aria-label="Saturday">Saturday</ion-select-option>
+                <ion-select-option value="Sunday" aria-label="Sunday">Sunday</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-label *ngIf="editingForm.get('weekday')?.touched && editingForm.get('weekday')?.errors?.['required']" color="danger">Weekday is mandatory</ion-label>
+            
+            <div class="buttons-container">
+              <ion-button class="cancel-button" fill="clear" (click)="editModal.dismiss()">Cancel</ion-button>
+              <ion-button class="save-button" fill="clear" (click)="onSaveClickEdit()" (click)="editModal.dismiss()" [disabled]="!editingForm.valid">Save</ion-button>
+            </div>
+            <ion-button class="delete-button" fill="clear" size="full" (click)="onDeleteClick()" (click)="editModal.dismiss()">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+
+          </ion-card-content>
+        </ion-card>
+      </form>
+    </ng-template>
+  </ion-modal>
+</ion-content>

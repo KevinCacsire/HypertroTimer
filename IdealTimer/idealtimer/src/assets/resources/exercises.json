@@ -1,0 +1,2023 @@
+{
+  "count": 239,
+  "results": [
+    {
+      "id": 1,
+      "name": "Alternating Bicep Curls",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 2,
+      "name": "Arnold Shoulder Press",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 3,
+      "name": "Ball Crunches",
+      "muscles": [
+        10,
+        8
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 4,
+      "name": "Barbell Ab Rollout",
+      "muscles": [
+        10,
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 5,
+      "name": "Barbell Biceps Curls",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 6,
+      "name": "Barbell Hip Thrust",
+      "muscles": [
+        8,
+        5,
+        6
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 7,
+      "name": "Barbell Lunges",
+      "muscles": [
+        6,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 8,
+      "name": "Barbell Reverse Wrist Curl",
+      "muscles": [
+        11
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 9,
+      "name": "Barbell Shoulder Press",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 10,
+      "name": "Barbell Shrugs",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 11,
+      "name": "Barbell Squat",
+      "muscles": [
+        6,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 12,
+      "name": "Barbell Wrist Curl",
+      "muscles": [
+        11
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 13,
+      "name": "Bench Press",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 14,
+      "name": "Bench Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 15,
+      "name": "Bent Over Dumbbell Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 16,
+      "name": "Bent Over External Rotation",
+      "muscles": [
+        5,
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 17,
+      "name": "Bent Over Lateral Raises",
+      "muscles": [
+        3,
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 18,
+      "name": "Bent Over Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 19,
+      "name": "Bent Over Row Reverse",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 20,
+      "name": "Braced Squat",
+      "muscles": [
+        6,
+        8,
+        10
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 21,
+      "name": "Bulgarian Split Squat",
+      "muscles": [
+        11,
+        8,
+        6,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 22,
+      "name": "Cable Biceps Curl",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 23,
+      "name": "Cable Concentration Curl",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 24,
+      "name": "Cable Cross-over",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 25,
+      "name": "Cable External Rotation",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 26,
+      "name": "Cable Fly",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 27,
+      "name": "Cable Hammer Curls",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 28,
+      "name": "Cable Pullover",
+      "muscles": [
+        5,
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 29,
+      "name": "Cable Rear Delt Fly",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 30,
+      "name": "Calf Press On Leg Press",
+      "muscles": [
+        9
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 31,
+      "name": "Calf Raises",
+      "muscles": [
+        9
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 32,
+      "name": "Calf Raises on Hack Machine",
+      "muscles": [
+        9
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 33,
+      "name": "Chin-Up",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 34,
+      "name": "Close-grip Bench Press",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 35,
+      "name": "Close-grip Lat Pulldown",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 36,
+      "name": "Commando Pull-Up",
+      "muscles": [
+        5,
+        1
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 37,
+      "name": "Crunches",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 38,
+      "name": "Crunches on Incline Bench",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 39,
+      "name": "Crunches With Cable",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 40,
+      "name": "Deadbug",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 41,
+      "name": "Deadhang",
+      "muscles": [
+        5,
+        11
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 42,
+      "name": "Deadlift",
+      "muscles": [
+        5,
+        7,
+        8,
+        6
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 43,
+      "name": "Decline Bench Press Barbell",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 44,
+      "name": "Decline Bench Press Dumbbell",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 45,
+      "name": "Decline Dumbbell Fly",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 46,
+      "name": "Decline Push-Up",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 47,
+      "name": "Deficit Deadlift",
+      "muscles": [
+        5,
+        7,
+        8,
+        6
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 48,
+      "name": "Diamond Push-Up",
+      "muscles": [
+        4,
+        2
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 49,
+      "name": "Dips",
+      "muscles": [
+        2,
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 50,
+      "name": "Dumbbell Bench Press",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 51,
+      "name": "Dumbbell Bent Over Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 52,
+      "name": "Dumbbell Biceps Curls",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 53,
+      "name": "Dumbbell Concentration Curl",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 54,
+      "name": "Dumbbell Farmer's Carry",
+      "muscles": [
+        5,
+        11
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 55,
+      "name": "Dumbbell Fly",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 56,
+      "name": "Dumbbell Hang Power Clean",
+      "muscles": [
+        5,
+        6,
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 57,
+      "name": "Dumbbell Incline Curl",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 58,
+      "name": "Dumbbell Pullover",
+      "muscles": [
+        5,
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 59,
+      "name": "Dumbbell Push-Up",
+      "muscles": [
+        4,
+        2,
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 60,
+      "name": "Dumbbell Shoulder Press",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 61,
+      "name": "Dumbbell Shrugs",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 62,
+      "name": "Dumbbell Sumo Deadlift",
+      "muscles": [
+        5,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 63,
+      "name": "Dumbbell Triceps Extension",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 64,
+      "name": "Dynamic Side Plank",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 65,
+      "name": "EZ-Bar Biceps Curls",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 66,
+      "name": "Face Pull",
+      "muscles": [
+        3,
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 67,
+      "name": "Flutter Kicks",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 68,
+      "name": "Front Plate Raise",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 69,
+      "name": "Front Raises",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 70,
+      "name": "Front Squat",
+      "muscles": [
+        6,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 71,
+      "name": "Glute Bridge",
+      "muscles": [
+        8
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 72,
+      "name": "Goblet Squat",
+      "muscles": [
+        6,
+        7,
+        8,
+        10
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 73,
+      "name": "Good Mornings",
+      "muscles": [
+        5,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 74,
+      "name": "Hack Squat",
+      "muscles": [
+        6,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 75,
+      "name": "Hammer Curls",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 76,
+      "name": "Handstand Push-Up",
+      "muscles": [
+        3,
+        2
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 77,
+      "name": "High Plank",
+      "muscles": [
+        10,
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 78,
+      "name": "Hindu Push-Up",
+      "muscles": [
+        4,
+        2,
+        3,
+        10
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 79,
+      "name": "Hindu Squat",
+      "muscles": [
+        6,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 80,
+      "name": "Hip Thrust",
+      "muscles": [
+        8
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 81,
+      "name": "Hollow Hold",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 82,
+      "name": "Hyperextensions",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 83,
+      "name": "Incline Barbell Bench Press",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 84,
+      "name": "Incline Bench Reverse Fly",
+      "muscles": [
+        3,
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 85,
+      "name": "Incline Dumbbell Bench Press",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 86,
+      "name": "Incline Dumbbell Fly",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 87,
+      "name": "Incline Dumbbell Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 88,
+      "name": "Incline Push-Up",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 89,
+      "name": "Incline Skull Crusher",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 90,
+      "name": "Inverted Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 91,
+      "name": "Iso Row Machine",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 92,
+      "name": "Kettlebell Curls",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 93,
+      "name": "Kettlebell Swing",
+      "muscles": [
+        5,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 94,
+      "name": "Knee Raises",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 95,
+      "name": "Kneeling Kickbacks",
+      "muscles": [
+        8
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 96,
+      "name": "L-Sit Hold",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 97,
+      "name": "Landmine Press",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 98,
+      "name": "Lateral Raises",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 99,
+      "name": "Lateral Row on Cable",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 100,
+      "name": "Lateral-to-Front Raises",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 101,
+      "name": "Leaning Back Lat Pulldown",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 102,
+      "name": "Leg Curl",
+      "muscles": [
+        7
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 103,
+      "name": "Leg Extension",
+      "muscles": [
+        6
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 104,
+      "name": "Leg Press",
+      "muscles": [
+        7,
+        6
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 105,
+      "name": "Leg Raises",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 106,
+      "name": "Legs Up Crunches",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 107,
+      "name": "Long-Pulley",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 108,
+      "name": "Low Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 109,
+      "name": "Lunges",
+      "muscles": [
+        6,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 110,
+      "name": "Lying Hip Raise",
+      "muscles": [
+        8,
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 111,
+      "name": "Lying Leg Raises",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 112,
+      "name": "Machine Butterfly",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 113,
+      "name": "Machine Chest Fly",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 114,
+      "name": "Machine Crunches",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 115,
+      "name": "Machine Pull-Ups",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 116,
+      "name": "Machine Shoulder Press",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 117,
+      "name": "Machine Side Bends",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 118,
+      "name": "Medicine Ball Twist",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 119,
+      "name": "Military Press with EZ-Bar",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 120,
+      "name": "Mountain Climbers",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 121,
+      "name": "Muscle Up",
+      "muscles": [
+        1,
+        2,
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 122,
+      "name": "Negative Crunches",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 123,
+      "name": "Nordic Curl",
+      "muscles": [
+        7
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 124,
+      "name": "One Arm Bent Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 125,
+      "name": "One-legged Calf Raises",
+      "muscles": [
+        9
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 126,
+      "name": "Overhand Cable Curl",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 127,
+      "name": "Overhead Press",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 128,
+      "name": "Overhead Squat",
+      "muscles": [
+        3,
+        6
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 129,
+      "name": "Pallof Press",
+      "muscles": [
+        10,
+        8,
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 130,
+      "name": "Parallettes Push-Up",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 131,
+      "name": "Pendlay Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 132,
+      "name": "Pike Push-Up",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 133,
+      "name": "Pistol Squat",
+      "muscles": [
+        6,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 134,
+      "name": "Plank",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 135,
+      "name": "Plank Shoulder Taps",
+      "muscles": [
+        10,
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 136,
+      "name": "Plate Front Raises",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 137,
+      "name": "Plate Twist",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 138,
+      "name": "Power Clean",
+      "muscles": [
+        5,
+        6,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 139,
+      "name": "Preacher Curls",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 140,
+      "name": "Press-Up",
+      "muscles": [
+        4,
+        2,
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 141,
+      "name": "Pull-Up",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 142,
+      "name": "Pulldown",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 143,
+      "name": "Push Press",
+      "muscles": [
+        3,
+        2
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 144,
+      "name": "Push-Up",
+      "muscles": [
+        4,
+        2,
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 145,
+      "name": "Push-Up Rotations",
+      "muscles": [
+        4,
+        10
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 146,
+      "name": "Rack Deadlift",
+      "muscles": [
+        5,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 147,
+      "name": "Rear Delt Raise",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 148,
+      "name": "Renegade Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 149,
+      "name": "Reverse Bar Curl",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 150,
+      "name": "Reverse Butterfly",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 151,
+      "name": "Reverse Curl",
+      "muscles": [
+        1,
+        11
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 152,
+      "name": "Reverse EZ-Bar Cable Curls",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 153,
+      "name": "Reverse Grip Bench Press",
+      "muscles": [
+        4,
+        2
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 154,
+      "name": "Reverse Lunges",
+      "muscles": [
+        6,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 155,
+      "name": "Reverse Nordic Curl",
+      "muscles": [
+        7
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 156,
+      "name": "Reverse Plank",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 157,
+      "name": "Reverse Preacher Curl",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 158,
+      "name": "Ring Dips",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 159,
+      "name": "Roman Chair",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 160,
+      "name": "Romanian Deadlift",
+      "muscles": [
+        7,
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 161,
+      "name": "Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 162,
+      "name": "Row Machine",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 163,
+      "name": "Russian Twists",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 164,
+      "name": "Scissor Kicks",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 165,
+      "name": "Scott Machine Curls",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 166,
+      "name": "Seated Bench Press",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 167,
+      "name": "Seated Cable Mid Trap Shrug",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 168,
+      "name": "Seated Cable Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 169,
+      "name": "Seated Hip Abduction",
+      "muscles": [
+        8
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 170,
+      "name": "Seated Hip Adduction",
+      "muscles": [
+        8
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 171,
+      "name": "Seated Knee Tuck",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 172,
+      "name": "Seated Rear Delt Raise",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 173,
+      "name": "Seated Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 174,
+      "name": "Seated Shrug",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 175,
+      "name": "Seated Triceps Press",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 176,
+      "name": "Shotgun Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 177,
+      "name": "Shoulder Shrug",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 178,
+      "name": "Side Crunch",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 179,
+      "name": "Side Dumbbell Trunk Flexion",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 180,
+      "name": "Side Plank",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 181,
+      "name": "Side Split Squat",
+      "muscles": [
+        6,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 182,
+      "name": "Side to Side Push-Up",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 183,
+      "name": "Side-Lying External Rotation",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 184,
+      "name": "Single-Arm Preacher Curl",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 185,
+      "name": "Single-Leg Extension",
+      "muscles": [
+        6
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 186,
+      "name": "Sit-Ups",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 187,
+      "name": "Sitting Calf Raises",
+      "muscles": [
+        9
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 188,
+      "name": "Skullcrusher",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 189,
+      "name": "Skullcrusher Dumbbells",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 190,
+      "name": "Skullcrusher EZ-Bar",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 191,
+      "name": "Smith Machine Bench Press",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 192,
+      "name": "Smith Machine Incline Press",
+      "muscles": [
+        4
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 193,
+      "name": "Smith Press",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 194,
+      "name": "Snatch",
+      "muscles": [
+        5,
+        6,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 195,
+      "name": "Speed Deadlift",
+      "muscles": [
+        5,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 196,
+      "name": "Splinter Sit-Ups",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 197,
+      "name": "Split Squat",
+      "muscles": [
+        6,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 198,
+      "name": "Squat",
+      "muscles": [
+        6,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 199,
+      "name": "Squat Box",
+      "muscles": [
+        6,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 200,
+      "name": "Squat Thrust",
+      "muscles": [
+        6,
+        7,
+        8,
+        10
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 201,
+      "name": "Standing Bicep Curl",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 202,
+      "name": "Standing Calf Raises",
+      "muscles": [
+        9
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 203,
+      "name": "Standing Dumbbell Lunges",
+      "muscles": [
+        6,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 204,
+      "name": "Standing Rope Forearm",
+      "muscles": [
+        11
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 205,
+      "name": "Stiff-Legged Deadlifts",
+      "muscles": [
+        7,
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 206,
+      "name": "Straight Back Lat Pulldown",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 207,
+      "name": "Straight Bar Cable Curls",
+      "muscles": [
+        1
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 208,
+      "name": "Straight Bar Cable Front Raise",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 209,
+      "name": "Straight-Arm Pulldown",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 210,
+      "name": "Sumo Deadlift",
+      "muscles": [
+        5,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 211,
+      "name": "Sumo Squat",
+      "muscles": [
+        6,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 212,
+      "name": "Superman",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 213,
+      "name": "T-Bar Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 214,
+      "name": "Thruster",
+      "muscles": [
+        3,
+        6,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 215,
+      "name": "Tricep Dumbbell Kickback",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 216,
+      "name": "Tricep Pushdown on Cable",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 217,
+      "name": "Triceps Extension on Cable",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 218,
+      "name": "Triceps Extensions on Cable",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 219,
+      "name": "Triceps Machine",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 220,
+      "name": "Triceps Pushdown",
+      "muscles": [
+        2
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 221,
+      "name": "Trunk Rotation With Cable",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 222,
+      "name": "TRX Band Row",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 223,
+      "name": "Underhand Lat Pulldown",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 224,
+      "name": "Upper External Oblique",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 225,
+      "name": "Upright Row Barbell",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 226,
+      "name": "Upright Row on Cable",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 227,
+      "name": "Upright Row with Dumbbells",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 228,
+      "name": "Upright Row with EZ-Bar",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 229,
+      "name": "V Push-Up",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 230,
+      "name": "V-Bar Pulldown",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 231,
+      "name": "Walking Barbell Lunges",
+      "muscles": [
+        6,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 232,
+      "name": "Walking Bridge",
+      "muscles": [
+        10
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 233,
+      "name": "Walking Dumbbell Lunges",
+      "muscles": [
+        6,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 234,
+      "name": "Wall Balls",
+      "muscles": [
+        3,
+        6,
+        10
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 235,
+      "name": "Wall Handstand",
+      "muscles": [
+        3
+      ],
+      "exercise_type": "isolation"
+    },
+    {
+      "id": 236,
+      "name": "Wall Push-Up",
+      "muscles": [
+        4,
+        3
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 237,
+      "name": "Weighted Step-Ups",
+      "muscles": [
+        6,
+        7,
+        8
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 238,
+      "name": "Wide Stance Low Box Squat",
+      "muscles": [
+        8,
+        7
+      ],
+      "exercise_type": "compound"
+    },
+    {
+      "id": 239,
+      "name": "YWTs",
+      "muscles": [
+        5
+      ],
+      "exercise_type": "isolation"
+    }
+  ]
+}

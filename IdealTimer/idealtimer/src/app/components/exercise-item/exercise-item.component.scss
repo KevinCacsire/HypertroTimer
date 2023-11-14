@@ -1,0 +1,17 @@
+ion-reorder {
+    --padding-start: 0px;
+    padding-left: 0px;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.exercise-label {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.exercise-label h1 {
+    font-size: 20px;
+    white-space: normal;
+}

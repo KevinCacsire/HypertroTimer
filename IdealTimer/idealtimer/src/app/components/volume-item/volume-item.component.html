@@ -1,0 +1,53 @@
+<div class="exercise-log">
+  <div>
+    <h3 class="exercise-name">{{ groupedExercises[0].exerciseName }}</h3>
+  </div>
+  <div *ngFor="let form of exerciseForms; let i = index" class="input-container">
+    <div class="input-fields">
+      <div class="input-group">
+        <div>
+          <input
+            id="weight-input"
+            class="exercise-input"
+            type="number"
+            inputmode="numeric"
+            [(ngModel)]="form.weight"
+            placeholder="Weight"
+          />
+          <span class="unit">kg</span>
+        </div>
+      </div>
+      <div class="input-group">
+        <div>
+          <input
+            id="reps-input"
+            class="exercise-input"
+            type="number"
+            inputmode="numeric"
+            [(ngModel)]="form.repetitions"
+            placeholder="Reps"
+          />
+          <span class="unit">reps</span>
+        </div>
+      </div>
+    </div>
+    <div class="check-button-container">
+      <ion-button
+        color="primary"
+        *ngIf="i === visibleCheckButtonIndex && showCheckButton"
+        (click)="finishedSet()"
+      >
+        <ion-icon name="checkmark-outline" color="light"></ion-icon>
+      </ion-button>
+    </div> 
+  </div>
+  <div class="add-delete-buttons-container">
+    <ion-button color="danger" (click)="deleteExerciseForm()">
+        <ion-icon name="close-outline" color="light"></ion-icon>
+    </ion-button>
+    <ion-button color="success" (click)="addExerciseForm()">
+        <ion-icon name="add-outline" color="light"></ion-icon>
+    </ion-button>
+</div>
+
+</div>

@@ -1,0 +1,103 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="setToday()">
+        <ion-icon name="today-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center">Calendar</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-row class="ion-justify-content-center calendar-header">
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="calendarBack()">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="8">
+      <h2 class="ion-text-center">
+        {{ viewTitle }}
+      </h2>
+    </ion-col>
+    <ion-col size="2">
+      <ion-button fill="clear" (click)="calendarForward()">
+        <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <calendar
+    [eventSource]="eventSource"
+    [calendarMode]="calendar.mode"
+    (onTitleChanged)="viewTitle = $event"
+    [startingDayMonth]="1"
+    (onEventSelected)="onEventSelected($event)"
+    [monthviewDisplayEventTemplate]="dayTemplate"
+    [noEventsLabel]="'No Workouts Completed'"
+  ></calendar>
+
+  <ion-modal class="modal" #infoModal>
+    <ng-template>
+      <ion-card class="scroll-content">
+        <ion-card-header>
+          <ion-card-title class="text-center">Workout-Information</ion-card-title>
+        </ion-card-header>
+  
+        <ion-card-content>
+          <p class="info-text">Total Time: {{ calculateTotalTime(selectedEventWorkoutInstance!.startingDate!, selectedEventWorkoutInstance!.endingDate!) }}</p>
+          <p class="info-text">From-To: {{ selectedEventWorkoutInstance!.startingDate | date: 'HH:mm' }}-{{ selectedEventWorkoutInstance!.endingDate | date: 'HH:mm' }}</p>
+          <p class="info-text">Date: {{ selectedEventWorkoutInstance!.startingDate | date: 'dd.MM.yyyy' }}</p>
+          <p class="info-text">Split: {{ selectedEventWorkoutInstance!.splitName }}</p>
+          <p class="info-text">Session: {{ selectedEventWorkoutInstance!.sessionName }}</p>
+          
+          <ion-list class="exercise-container">
+            <ng-container *ngFor="let exerciseGroup of groupedExercises">
+              <ion-item>
+                <ion-label class="exercise-item">
+                  <h2>{{ exerciseGroup[0].exerciseName }}</h2>
+                  <ion-list class="exercise-list">
+                    <ion-item *ngFor="let exercise of exerciseGroup" class="set-item">
+                      <div class="exercise-weight">{{ exercise.weight }} kg&nbsp;</div>
+                      <div class="exercise-reps">for&nbsp;{{ exercise.reps }} reps</div>
+                    </ion-item>
+                  </ion-list>
+                </ion-label>
+              </ion-item>
+            </ng-container>
+          </ion-list>
+          
+          
+          <div>
+            <ion-button color="success" size="full" (click)="infoModal.dismiss()">
+              CLOSE
+            </ion-button>
+            <ion-button color="danger" size="full" (click)="onDeleteClick()" (click)="infoModal.dismiss()">
+              DELETE THIS SESSION
+            </ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </ion-modal>
+
+  <ng-template #dayTemplate let-view="view" let-row="row" let-col="col">
+    {{view.dates[row*7+col].label}}
+    <div class="indicator-container">
+      <div class="event-indicator" *ngFor="let e of view.dates[row*7+col].events"></div>
+    </div>
+  </ng-template>
+
+</ion-content>

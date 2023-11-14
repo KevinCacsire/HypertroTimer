@@ -1,0 +1,105 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div slot="start" style="width: 48px;"></div>
+
+    <ion-title class="ion-text-center">Workout Splits</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <div class="flex-center empty-message" *ngIf="showEmptyMessage">
+    Seems like you haven't created a split yet. Press the "+"-button to add your first split.
+    <p>Alternatively refresh the page by pulling down on the screen.</p>
+  </div>
+
+  <ion-list>
+    <app-split-item *ngFor="let split of splits"
+      [split]="split"
+      (itemClick)="clickedSplit(split.splitName, split.splitId)"
+      (editClick)="openEditModal(split)">
+      </app-split-item>
+  </ion-list>
+
+  <div class="content-container">
+    <ion-fab class="add-button" vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button id="open-add-split-card" (click)="addModal.present()">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+
+  <ion-modal id="splits-modal" class="modal" (ionModalDidDismiss)="clearAddingForm()" #addModal>
+    <ng-template>
+      <form [formGroup]="addingForm">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Adding New Workout Split</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-item>
+              <ion-input formControlName="splitName" label="Name of split (e.g., 'PPL')" labelPlacement="stacked" placeholder="Enter text" (keyup.enter)="handleAddEnterKey()"></ion-input>
+            </ion-item>
+            <ion-label *ngIf="addingForm.get('splitName')?.touched && addingForm.get('splitName')?.errors?.['required']" color="danger">Name is mandatory</ion-label>
+            <ion-item>
+              <ion-input inputmode="numeric" type="number" formControlName="sessionsAmount" label="Number of workouts in split (e.g., '3')" labelPlacement="stacked" placeholder="Enter number" (keyup.enter)="handleAddEnterKey()"></ion-input>
+            </ion-item>
+            <ion-label *ngIf="addingForm.get('sessionsAmount')?.touched && addingForm.get('sessionsAmount')?.errors?.['pattern']" color="danger">Use only numbers</ion-label>
+            <ion-label *ngIf="addingForm.get('sessionsAmount')?.touched && addingForm.get('sessionsAmount')?.errors?.['required']" color="danger">Number is mandatory</ion-label>
+            <div class="buttons-container">
+              <ion-button class="cancel-button" fill="clear" (click)="clearAddingForm()" (click)="addModal.dismiss()">
+                Cancel
+              </ion-button>
+              <ion-button class="save-button" fill="clear" (click)="onSaveClickAdd()" (click)="addModal.dismiss()" [disabled]="!addingForm.valid">
+                Save
+              </ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </form>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal id="edit-modal" class="modal" #editModal>
+    <ng-template>
+      <form [formGroup]="editingForm">
+        <ion-card>
+          <ion-card-header>
+            <div>
+              <ion-card-title>Editing "{{ editingSplit?.splitName }}"</ion-card-title>
+            </div>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-item>
+              <ion-input formControlName="splitName" label="Name of split (e.g., 'PPL')" labelPlacement="stacked" placeholder="Enter text" (keyup.enter)="handleEditEnterKey()"></ion-input>
+            </ion-item>
+            <ion-label *ngIf="editingForm.get('splitName')?.touched && editingForm.get('splitName')?.errors?.['required']" color="danger">Name is mandatory</ion-label>
+            <ion-item>
+              <ion-input inputmode="numeric" type="number" formControlName="sessionsAmount" label="Number of workouts in split (e.g., '3')" labelPlacement="stacked" placeholder="Enter number" (keyup.enter)="handleEditEnterKey()"></ion-input>
+            </ion-item>
+            <ion-label *ngIf="editingForm.get('sessionsAmount')?.touched && editingForm.get('sessionsAmount')?.errors?.['pattern']" color="danger">Use only numbers</ion-label>
+            <ion-label *ngIf="editingForm.get('sessionsAmount')?.touched && editingForm.get('sessionsAmount')?.errors?.['required']" color="danger">Number is mandatory</ion-label>
+            
+            <div class="buttons-container">
+              <ion-button class="cancel-button" fill="clear" (click)="editModal.dismiss()">Cancel</ion-button>
+              <ion-button class="save-button" fill="clear" (click)="onSaveClickEdit()" (click)="editModal.dismiss()" [disabled]="!editingForm.valid">Save</ion-button>
+            </div>
+            <ion-button class="delete-button" fill="clear" size="full" (click)="onDeleteClick()" (click)="editModal.dismiss()">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+            
+          </ion-card-content>
+        </ion-card>
+      </form>
+    </ng-template>
+  </ion-modal>
+</ion-content>

@@ -1,0 +1,107 @@
+.icon-margin {
+  margin-left: 0.25em;
+}
+
+ion-card-header::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: var(--ion-color-dark);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.exercise-container::before {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: var(--ion-color-dark);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.info-text {
+  font-size: 1.2em;
+}
+
+.scroll-content {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.exercise-item {
+  margin-bottom: 0.3em;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exercise-list {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.set-item {
+  height: 2em;
+  width: 100%;
+}
+
+.exercise-weight .exercise-reps {
+  white-space: nowrap;
+  font-size: 1em;
+  padding-bottom: 0.4em;
+}
+
+.indicator-container {
+  padding-right: 0.4em;
+  padding-left: 0.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.event-indicator {
+  background: var(--ion-color-success);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+::ng-deep .toast-custom {
+  transform: translateY(-50px) !important;
+}
+
+.today-button {
+  color: var(--ion-color-primary);
+}
+
+ion-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ion-title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* If the ion-title still doesn't appear centered because of different button widths,
+   you can use a pseudo-element to balance the button widths. */
+
+ion-toolbar::after {
+  content: '';
+  display: block;
+  flex: 1;
+}
+
+/* Ensure the buttons do not take more space than they need */
+ion-buttons[slot="start"],
+ion-buttons[slot="end"] {
+  flex: 0 0 auto;
+}
+
