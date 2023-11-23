@@ -1,0 +1,12 @@
+FE:
+change url in app.module.ts
+
+ionic build --prod (in frontend folder)
+firebase deploy (in HypertroTimer folder)
+
+BE:
+change comments in main.ts file
+
+git add .
+git commit -am "message"
+git push heroku master
