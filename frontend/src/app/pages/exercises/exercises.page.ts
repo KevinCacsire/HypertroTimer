@@ -283,8 +283,7 @@ export class ExercisesPage implements OnInit, OnDestroy {
 
     if (deletedExerciseIndex !== -1) {
       const updatedExercises = [...this.exercises];
-      const deletedExercise = updatedExercises.splice(deletedExerciseIndex, 1)[0];
-      updatedExercises.push(deletedExercise);
+      updatedExercises.splice(deletedExerciseIndex, 1)[0];
       this.updateExerciseIndexOrders(updatedExercises);
       
       this.store.dispatch(deleteExercise({

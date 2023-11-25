@@ -1,9 +1,9 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'idealtimer',
-  webDir: 'www/idealtimer',
+  appId: 'com.example.app',
+  appName: 'HypertroTimer',
+  webDir: 'www',
   server: {
     androidScheme: 'https'
   }

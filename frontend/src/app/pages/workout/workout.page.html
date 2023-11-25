@@ -31,8 +31,7 @@
     </ng-container>
   </ion-list>
   
-
-  <div class="content-container">
+  <div class="button-container">
     <ion-button class="subtract-time-button" expand="block" (click)="subtractToRestIntervalTimer()">
       -5secs
     </ion-button>
@@ -43,6 +42,8 @@
       +5secs
     </ion-button>
   </div>
+
+  <div class="additional-space"></div>
 
   <ion-modal trigger="open-finish-modal" class="modal" #finishModal>
     <ng-template>

@@ -28,13 +28,15 @@
       </app-split-item>
   </ion-list>
 
-  <div class="content-container">
+  <div class="button-container">
     <ion-fab class="add-button" vertical="bottom" horizontal="end" slot="fixed">
       <ion-fab-button id="open-add-split-card" (click)="addModal.present()">
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
     </ion-fab>
   </div>
+
+  <div class="additional-space"></div>
 
   <ion-modal id="splits-modal" class="modal" (ionModalDidDismiss)="clearAddingForm()" #addModal>
     <ng-template>
@@ -46,11 +48,13 @@
 
           <ion-card-content>
             <ion-item>
-              <ion-input formControlName="splitName" label="Name of split (e.g., 'PPL')" labelPlacement="stacked" placeholder="Enter text" (keyup.enter)="handleAddEnterKey()"></ion-input>
+              <ion-label position="stacked">Name of split (e.g., 'PPL')</ion-label>
+              <ion-input formControlName="splitName" placeholder="Enter text" (keyup.enter)="handleAddEnterKey()"></ion-input>
             </ion-item>
             <ion-label *ngIf="addingForm.get('splitName')?.touched && addingForm.get('splitName')?.errors?.['required']" color="danger">Name is mandatory</ion-label>
             <ion-item>
-              <ion-input inputmode="numeric" type="number" formControlName="sessionsAmount" label="Number of workouts in split (e.g., '3')" labelPlacement="stacked" placeholder="Enter number" (keyup.enter)="handleAddEnterKey()"></ion-input>
+              <ion-label position="stacked">Number of workouts in split (e.g., '3')</ion-label>
+              <ion-input inputmode="numeric" type="number" formControlName="sessionsAmount" placeholder="Enter number" (keyup.enter)="handleAddEnterKey()"></ion-input>
             </ion-item>
             <ion-label *ngIf="addingForm.get('sessionsAmount')?.touched && addingForm.get('sessionsAmount')?.errors?.['pattern']" color="danger">Use only numbers</ion-label>
             <ion-label *ngIf="addingForm.get('sessionsAmount')?.touched && addingForm.get('sessionsAmount')?.errors?.['required']" color="danger">Number is mandatory</ion-label>
@@ -80,11 +84,13 @@
 
           <ion-card-content>
             <ion-item>
-              <ion-input formControlName="splitName" label="Name of split (e.g., 'PPL')" labelPlacement="stacked" placeholder="Enter text" (keyup.enter)="handleEditEnterKey()"></ion-input>
+              <ion-label position="stacked">Name of split (e.g., 'PPL')</ion-label>
+              <ion-input formControlName="splitName" placeholder="Enter text" (keyup.enter)="handleEditEnterKey()"></ion-input>
             </ion-item>
             <ion-label *ngIf="editingForm.get('splitName')?.touched && editingForm.get('splitName')?.errors?.['required']" color="danger">Name is mandatory</ion-label>
             <ion-item>
-              <ion-input inputmode="numeric" type="number" formControlName="sessionsAmount" label="Number of workouts in split (e.g., '3')" labelPlacement="stacked" placeholder="Enter number" (keyup.enter)="handleEditEnterKey()"></ion-input>
+              <ion-label position="stacked">Number of workouts in split (e.g., '3')</ion-label>
+              <ion-input inputmode="numeric" type="number" formControlName="sessionsAmount" placeholder="Enter number" (keyup.enter)="handleEditEnterKey()"></ion-input>
             </ion-item>
             <ion-label *ngIf="editingForm.get('sessionsAmount')?.touched && editingForm.get('sessionsAmount')?.errors?.['pattern']" color="danger">Use only numbers</ion-label>
             <ion-label *ngIf="editingForm.get('sessionsAmount')?.touched && editingForm.get('sessionsAmount')?.errors?.['required']" color="danger">Number is mandatory</ion-label>

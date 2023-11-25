@@ -69,16 +69,13 @@
     color: white;
 }
 
-.content-container {
-    position: relative;
-    padding-bottom: 100px;
+.button-container {
+    position: fixed;
 }
 
-/*.add-button {
-    position: fixed;
-    margin-right: 12px;
-    margin-bottom: 12px;
-}*/
+.additional-space {
+    height: 100px;
+}
 
 .edit-button {
     margin-left: auto; 
@@ -124,3 +121,7 @@ ion-modal.modal ion-card {
     text-overflow: clip;
   }
   
+.edit-button {
+    width: 50px;
+    height: 50px;
+}

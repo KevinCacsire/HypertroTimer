@@ -30,7 +30,7 @@
     </ion-reorder-group>
   </ion-list>
 
-  <div class="content-container">
+  <div class="button-container">
     <ion-fab class="add-button" vertical="bottom" horizontal="end" slot="fixed">
       <ion-fab-button id="open-new-exercise-card" (click)="addModal.present()">
         <ion-icon name="add"></ion-icon>
@@ -42,6 +42,7 @@
     </ion-button>
   </div>
   
+  <div class="additional-space"></div>
 
   <ion-modal id="exercises-modal" class="modal" (ionModalDidDismiss)="clearAddingForm()" #addModal>
     <ng-template>

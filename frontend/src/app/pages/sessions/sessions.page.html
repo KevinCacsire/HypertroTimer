@@ -30,13 +30,15 @@
     ></app-session-item>
   </ion-list>
 
-  <div class="content-container">
+  <div class="button-container">
     <ion-fab class="add-button" vertical="bottom" horizontal="end" slot="fixed">
       <ion-fab-button id="open-new-session-card" (click)="addModal.present()">
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
     </ion-fab>
   </div>
+
+  <div class="additional-space"></div>
 
   <ion-modal id="sessions-modal" class="modal" (ionModalDidDismiss)="clearAddingForm()" #addModal>
     <ng-template>
@@ -49,12 +51,14 @@
           <ion-card-content>
 
             <ion-item>
-              <ion-input formControlName="sessionName" label="Name of session (e.g., 'Push')" labelPlacement="stacked" placeholder="Enter text" (keyup.enter)="handleAddEnterKey()"></ion-input>
+              <ion-label position="stacked">Name of session (e.g., 'Push')</ion-label>
+              <ion-input formControlName="sessionName" placeholder="Enter text" (keyup.enter)="handleAddEnterKey()"></ion-input>
             </ion-item>
             <ion-label *ngIf="addingForm.get('sessionName')?.touched && addingForm.get('sessionName')?.errors?.['required']" color="danger">Name is mandatory</ion-label>
             
             <ion-item>
-              <ion-select formControlName="weekday" interface="popover" label="Planned day for this session (e.g., 'Monday')" label-placement="stacked" placeholder="Select day">
+              <ion-label position="stacked">Weekday (e.g., 'Monday')</ion-label>
+              <ion-select formControlName="weekday" interface="popover" placeholder="Select day">
                 <ion-select-option value="Monday" aria-label="Monday">Monday</ion-select-option>
                 <ion-select-option value="Tuesday" aria-label="Tuesday">Tuesday</ion-select-option>
                 <ion-select-option value="Wednesday" aria-label="Wednesday">Wednesday</ion-select-option>
@@ -102,7 +106,8 @@
             <ion-label *ngIf="editingForm.get('sessionName')?.touched && editingForm.get('sessionName')?.errors?.['required']" color="danger">Name is mandatory</ion-label>
           
             <ion-item>
-              <ion-select formControlName="weekday" interface="popover" label="Weekday for this session (e.g., 'Monday')" label-placement="stacked" placeholder="Select day">
+              <ion-label position="stacked">Weekday (e.g., 'Monday')</ion-label>
+              <ion-select formControlName="weekday" interface="popover" placeholder="Select day">
                 <ion-select-option value="Monday" aria-label="Monday">Monday</ion-select-option>
                 <ion-select-option value="Tuesday" aria-label="Tuesday">Tuesday</ion-select-option>
                 <ion-select-option value="Wednesday" aria-label="Wednesday">Wednesday</ion-select-option>

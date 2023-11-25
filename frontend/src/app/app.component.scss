@@ -153,13 +153,26 @@ ion-item.selected {
   width: 50%; 
 }
 
+.sounds-container {
+  width: 100%;
+}
+
 .sound-container {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
+  width: 100%;
 }
 
 .custom-select::part(placeholder) {
   opacity: 1;
+}
+
+.custom-select {
+  position: static;
+  max-width: 100% !important;
+  width: 100%;
+  --padding-start: 0px;
+  padding-left: 0px;
 }
 
 ::ng-deep .toast-custom {
